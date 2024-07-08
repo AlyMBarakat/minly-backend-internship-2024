@@ -4,7 +4,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { HealthModule } from './health/health.module';
-import typeorm from './config/typerorm';
+import { MoviesModule } from './movies/movies.module';
+import typeorm from './config/typeorm';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import typeorm from './config/typerorm';
         configService.get('typeorm'),
     }),
     HealthModule,
+    MoviesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -9,5 +9,8 @@ export class Movie {
   title: string;
 
   @Column()
-  releaseDate: string;
+  releaseDate: number;
+
+  @Column()
+  rating: number;
 }
